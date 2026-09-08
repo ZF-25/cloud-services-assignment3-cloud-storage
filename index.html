@@ -159,119 +159,292 @@
     </section>
 
     <section>
-    <h2>6. Own web server vs SaaS, PaaS and IaaS</h2>
+      <h2>3. Own web server vs SaaS, PaaS and IaaS</h2>
 
-    <p>
-        I think maintaining your own web server makes sense when a company
-        needs a lot of control over the server and its configuration. For
-        example, a company might have special software or security
-        requirements that are difficult to meet with a normal hosting
-        service. It can also make sense if the company already has IT staff
-        who know how to manage servers.
-    </p>
+      <p>
+        I think maintaining your own web server makes sense when a company needs
+        a lot of control over the server and its configuration. For example, a
+        company might have special software or security requirements that are
+        difficult to meet with a normal hosting service. It can also make sense
+        if the company already has IT staff who know how to manage servers.
+      </p>
 
-    <p>
-        However, running your own server also means more responsibility.
-        Someone has to take care of updates, security, backups, storage and
-        problems when something goes wrong. This can take a lot of time and
-        money.
-    </p>
+      <p>
+        However, running your own server also means more responsibility. Someone
+        has to take care of updates, security, backups, storage and problems
+        when something goes wrong. This can take a lot of time and money.
+      </p>
 
-    <p>
+      <p>
         For many companies, using a cloud service is easier. IaaS gives the
         company virtual machines and more control over the operating system.
-        This is similar to the previous cPouta exercise, where I used an
-        Ubuntu virtual machine and installed and configured the web server
-        myself.
-    </p>
+        This is similar to the previous cPouta exercise, where I used an Ubuntu
+        virtual machine and installed and configured the web server myself.
+      </p>
 
-    <p>
-        With PaaS, the company does not need to manage as much of the
-        underlying infrastructure. The focus is more on deploying the
-        application. For example, in the Rahti exercise, the web application
-        was deployed as a container instead of me having to create and
-        maintain a whole virtual machine.
-    </p>
+      <p>
+        With PaaS, the company does not need to manage as much of the underlying
+        infrastructure. The focus is more on deploying the application. For
+        example, in the Rahti exercise, the web application was deployed as a
+        container instead of me having to create and maintain a whole virtual
+        machine.
+      </p>
 
-    <p>
+      <p>
         SaaS goes even further because the company uses a complete software
-        service provided by someone else. For example, a company could use
-        an online service for email instead of installing and maintaining
-        its own email server.
-    </p>
+        service provided by someone else. For example, a company could use an
+        online service for email instead of installing and maintaining its own
+        email server.
+      </p>
 
-    <p>
-        In my opinion, the choice depends on how much control the company
-        needs and how much server administration it wants to do itself. A
-        small company will probably benefit more from SaaS or PaaS, while a
-        company with special requirements and its own IT team might prefer
-        IaaS or its own servers.
-    </p>
+      <p>
+        In my opinion, the choice depends on how much control the company needs
+        and how much server administration it wants to do itself. A small
+        company will probably benefit more from SaaS or PaaS, while a company
+        with special requirements and its own IT team might prefer IaaS or its
+        own servers.
+      </p>
 
-    <p class="source">
+      <p class="source">
         <strong>Sources:</strong> CSC – cPouta and Rahti documentation;
         Microsoft Azure – Cloud service models
-    </p>
-</section>
+      </p>
+    </section>
 
-<section>
-    <h2>7. Public DNS resolvers vs ISP DNS</h2>
+    <section>
+      <h2>4. Public DNS resolvers vs ISP DNS</h2>
 
-    <p>
-        Public DNS resolvers are DNS services that anyone can use instead
-        of the DNS server provided by their internet service provider (ISP).
-        Two well-known examples are Google's 8.8.8.8 and Cloudflare's
-        1.1.1.1.
-    </p>
+      <p>
+        Public DNS resolvers are DNS services that anyone can use instead of the
+        DNS server provided by their internet service provider (ISP). Two
+        well-known examples are Google's 8.8.8.8 and Cloudflare's 1.1.1.1.
+      </p>
 
-    <p>
-        One advantage is that public DNS services can sometimes be faster
-        or more reliable than an ISP's DNS server. This depends on the
-        user's location and internet provider, but large providers have
-        DNS servers in many locations around the world. If the ISP's DNS
-        service is slow or has problems, using a public resolver can be
-        an easy alternative.
-    </p>
+      <p>
+        One advantage is that public DNS services can sometimes be faster or
+        more reliable than an ISP's DNS server. This depends on the user's
+        location and internet provider, but large providers have DNS servers in
+        many locations around the world. If the ISP's DNS service is slow or has
+        problems, using a public resolver can be an easy alternative.
+      </p>
 
-    <p>
+      <p>
         Another advantage is privacy and security features. For example,
-        Cloudflare promotes 1.1.1.1 as a privacy-focused DNS resolver.
-        Public DNS services can also support encrypted DNS protocols such
-        as DNS over HTTPS. Some public DNS services provide additional
-        protection against known malicious domains.
-    </p>
+        Cloudflare promotes 1.1.1.1 as a privacy-focused DNS resolver. Public
+        DNS services can also support encrypted DNS protocols such as DNS over
+        HTTPS. Some public DNS services provide additional protection against
+        known malicious domains.
+      </p>
 
-    <p>
-        However, using a public DNS resolver also has some disadvantages.
-        The DNS provider can see DNS queries from users, so changing from
-        the ISP's DNS does not mean that DNS information becomes completely
-        private. The user is simply trusting a different company with that
-        information.
-    </p>
+      <p>
+        However, using a public DNS resolver also has some disadvantages. The
+        DNS provider can see DNS queries from users, so changing from the ISP's
+        DNS does not mean that DNS information becomes completely private. The
+        user is simply trusting a different company with that information.
+      </p>
 
-    <p>
+      <p>
         There can also be differences in filtering. An ISP might provide
-        services or filters through its DNS, while a public resolver may
-        behave differently. Some public DNS providers also have their own
-        security or content-filtering options, which can affect which
-        websites can be reached.
+        services or filters through its DNS, while a public resolver may behave
+        differently. Some public DNS providers also have their own security or
+        content-filtering options, which can affect which websites can be
+        reached.
+      </p>
+
+      <p>
+        For normal home users, the ISP's DNS resolver is usually the easiest
+        option because it is normally configured automatically when the router
+        connects to the internet. I think public DNS is useful when someone has
+        problems with their ISP's DNS or wants specific features such as
+        encrypted DNS or additional security options. However, there is not
+        necessarily a reason for every home user to change their DNS if the
+        ISP's service already works well.
+      </p>
+
+      <p class="source">
+        <strong>Sources:</strong> Google Public DNS; Cloudflare 1.1.1.1; Mozilla
+        – DNS over HTTPS
+      </p>
+    </section>
+
+    <section>
+      <h2>Practical work: Rahti and Allas</h2>
+
+      <p>
+        For the practical part of this assignment, I deployed my webpage using
+        CSC Rahti and used CSC Allas for storing the images separately from the
+        webpage. This means that the HTML page is served by Rahti, while the
+        media files are stored in an Allas bucket.
+      </p>
+
+      <p>
+        I used the CSC project
+        <strong>2020498 Cloud Services DIN25 Project 1</strong>. The Rahti
+        application for this assignment was created in a separate Rahti project
+        called <strong>cloud-storage-assignment3</strong>. I kept the
+        application from the previous assignment in its own project and did not
+        modify it.
+      </p>
+
+      <h3>1. CSC project and available services</h3>
+
+      <p>
+        First, I checked my CSC project in MyCSC. The project has access to
+        cPouta, Rahti and Allas. Rahti is used to run the webpage and Allas is
+        used to store the media files.
+      </p>
+
+      <img
+        src="https://a3s.fi/swift/v1/2020498-cloud-services-media/01-mycsc-project.png"
+        alt="MyCSC project showing the available CSC services"
+        style="max-width: 100%; height: auto"
+      />
+
+      <p>
+        <strong>Figure 1:</strong> MyCSC project showing the project number and
+        the available services, including Rahti and Allas.
+      </p>
+
+      <h3>2. Creating a separate Rahti project</h3>
+
+      <p>
+        I created a new Rahti project called
+        <strong>cloud-storage-assignment3</strong> for this assignment. I used a
+        separate project so that this assignment would not affect the web
+        application from the previous assignment.
+      </p>
+
+      <img
+        src="https://a3s.fi/swift/v1/2020498-cloud-services-media/02-rahti-project.png"
+        alt="Rahti project for the Cloud Storage Assignment"
+        style="max-width: 100%; height: auto"
+      />
+
+      <p>
+        <strong>Figure 2:</strong> The separate Rahti project
+        <strong>cloud-storage-assignment3</strong> is active and associated with
+        CSC project 2020498.
+      </p>
+
+      <h3>3. Deploying the webpage from GitHub</h3>
+
+      <p>
+        I created a separate GitHub repository called
+        <strong>cloud-services-assignment3-cloud-storage</strong>. The webpage
+        is stored in this repository as an <strong>index.html</strong> file.
+      </p>
+
+      <p>
+        In Rahti, I used the Apache HTTP Server Builder Image from the Software
+        Catalog. The BuildConfig was connected to my GitHub repository, so Rahti
+        could build the webpage into a container image. The build completed
+        successfully and the application was then deployed in the new Rahti
+        project.
+      </p>
+
+      <img
+        src="https://a3s.fi/swift/v1/2020498-cloud-services-media/03-rahti-buildconfig.png"
+        alt="Rahti BuildConfig showing the GitHub repository"
+        style="max-width: 100%; height: auto"
+      />
+
+      <p>
+        <strong>Figure 3:</strong> Rahti BuildConfig showing the GitHub
+        repository used as the source for the webpage.
+      </p>
+
+      <h3>4. Storing media in Allas</h3>
+
+      <p>
+        For the media storage, I created the Allas bucket
+        <strong>2020498-cloud-services-media</strong>. The bucket was made
+        public so that the images could be loaded by the webpage without
+        requiring a login.
+      </p>
+
+      <p>
+        I uploaded screenshots from the practical work to this bucket. The
+        screenshots are stored separately from the HTML application running on
+        Rahti. This demonstrates the separation between the PaaS service running
+        the webpage and the object storage used for the media.
+      </p>
+
+      <img
+        src="https://a3s.fi/swift/v1/2020498-cloud-services-media/04-allas-bucket.png"
+        alt="Allas bucket containing the documentation screenshots"
+        style="max-width: 100%; height: auto"
+      />
+
+      <p>
+        <strong>Figure 4:</strong> The Allas bucket containing the documentation
+        screenshots used for this assignment.
+      </p>
+
+      <h3>5. Final webpage running on Rahti</h3>
+
+      <p>
+        After the build was completed, Rahti created a public route for the
+        application. The webpage can be accessed through the Rahti URL and
+        contains my answers to the four selected theory questions as well as the
+        practical documentation.
+      </p>
+
+      <img
+        src="https://a3s.fi/swift/v1/2020498-cloud-services-media/05-final-webpage.png"
+        alt="Final Cloud Services assignment webpage running on Rahti"
+        style="max-width: 100%; height: auto"
+      />
+
+      <p>
+        <strong>Figure 5:</strong> The final webpage running from the Rahti
+        application.
+      </p>
+
+      <h3>How Rahti and Allas are used together</h3>
+
+      <p>
+        The main idea of the practical work is that the two services have
+        different roles. Rahti runs and serves the HTML webpage, while Allas
+        stores the media files. The webpage uses the public HTTPS addresses of
+        the Allas objects to display the images.
+      </p>
+
+      <p>
+        For example, the documentation images are stored in the
+        <strong>2020498-cloud-services-media</strong> bucket and are loaded
+        using their Allas URLs. The browser therefore gets the webpage from
+        Rahti and the images from Allas.
+      </p>
+
+      <p>
+        This setup is useful because the webpage and the large media files do
+        not have to be stored in the same place. The application can run on a
+        PaaS platform such as Rahti, while object storage such as Allas can be
+        used for images and other static media.
+      </p>
+    </section>
+
+    <section>
+    <h2>6. Public URL</h2>
+
+    <p>
+        The final webpage is publicly available through the Rahti route:
     </p>
 
     <p>
-        For normal home users, the ISP's DNS resolver is usually the easiest
-        option because it is normally configured automatically when the
-        router connects to the internet. I think public DNS is useful when
-        someone has problems with their ISP's DNS or wants specific features
-        such as encrypted DNS or additional security options. However, there
-        is not necessarily a reason for every home user to change their DNS
-        if the ISP's service already works well.
+        <a href="https://cloud-assignment3-cloud-storage-assignment3.2.rahtiapp.fi"
+           target="_blank">
+            https://cloud-assignment3-cloud-storage-assignment3.2.rahtiapp.fi
+        </a>
     </p>
 
-    <p class="source">
-        <strong>Sources:</strong> Google Public DNS; Cloudflare 1.1.1.1;
-        Mozilla – DNS over HTTPS
+    <p>
+        The webpage is served by CSC Rahti, while the media files are stored
+        separately in the CSC Allas bucket
+        <strong>2020498-cloud-services-media</strong>.
     </p>
 </section>
+
 
   </body>
 </html>
