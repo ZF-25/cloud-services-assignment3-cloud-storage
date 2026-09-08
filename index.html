@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cloud Services - Cloud Storage Assignment</title>
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        max-width: 1000px;
+        margin: auto;
+        padding: 30px;
+        background: #f4f6f8;
+        color: #222;
+      }
+
+      section {
+        background: white;
+        padding: 25px;
+        margin-bottom: 25px;
+        border-radius: 8px;
+      }
+
+      h1 {
+        margin-bottom: 10px;
+      }
+
+      h2 {
+        color: #174a7c;
+        margin-top: 0;
+      }
+
+      h3 {
+        margin-top: 25px;
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+        margin-top: 15px;
+      }
+
+      .source {
+        font-size: 0.9em;
+      }
+    </style>
+  </head>
+
+  <body>
+    <section>
+      <h1>Cloud Services - Cloud Storage Assignment</h1>
+
+      <p><strong>Name:</strong> Zainab Fatima</p>
+      <p><strong>Course:</strong> Cloud Services</p>
+
+      <p>
+        This webpage documents my Cloud Services assignment. It contains my
+        answers to the selected theory questions and the practical work using
+        CSC Rahti and Allas.
+      </p>
+    </section>
+
+    <section>
+      <h2>1. Cloud-based email and calendar services</h2>
+
+      <p>
+        Many companies use cloud-based email and calendar services because they
+        are easier to use and maintain than running their own email servers.
+        Services like Microsoft 365 and Google Workspace give employees email
+        and calendars without the company having to manage all the server
+        hardware itself.
+      </p>
+
+      <p>
+        One big advantage is that employees can use their email and calendar
+        from different places and devices. For example, an employee can check
+        their work email from their laptop at the office and then use their
+        phone when they are working from home. Shared calendars also make it
+        easier for employees to arrange meetings and see when other people are
+        available.
+      </p>
+
+      <p>
+        Another reason is that the company does not have to do as much technical
+        maintenance. If the company had its own email server, the IT staff would
+        need to take care of updates, storage, security and possible server
+        problems. With a cloud service, most of the server infrastructure is
+        handled by the service provider.
+      </p>
+
+      <p>
+        Cloud services are also easier to scale. If a company hires new
+        employees, it can create new accounts without having to buy and set up
+        another physical server. The same applies if the company becomes
+        smaller.
+      </p>
+
+      <p>
+        There are also some disadvantages. The company has to pay a
+        subscription, and it depends on the cloud provider and an internet
+        connection. There can also be concerns about privacy and where company
+        data is stored. Even with these disadvantages, cloud email and calendar
+        services are convenient and usually require less work from the company's
+        own IT staff.
+      </p>
+
+      <p class="source">
+        <strong>Sources:</strong> Google Workspace and Microsoft 365
+      </p>
+    </section>
+
+    <section>
+      <h2>2. Amazon Glacier and cloud archive storage</h2>
+
+      <p>
+        A mid-size company could use Amazon S3 Glacier for data that needs to be
+        kept for a long time but is not accessed very often. For example, the
+        company could store old backups, database backups, financial records or
+        old project files there.
+      </p>
+
+      <p>
+        One of the main reasons for using this type of storage is the cost.
+        Keeping a large amount of data on normal storage can become expensive,
+        especially when the data is not used very often. Archive storage is made
+        for data that can stay untouched for months or even years. If the
+        company needs the data later, it can retrieve it, although retrieving
+        archived data can take longer and may have an additional cost.
+      </p>
+
+      <p>
+        For example, a company could keep its current files on normal cloud
+        storage and move older backups to S3 Glacier. This way the old data is
+        still available if it is needed, but the company does not have to keep
+        everything on frequently accessed storage.
+      </p>
+
+      <p>
+        Other large cloud providers have similar storage options. Microsoft
+        Azure provides archive storage through Azure Blob Storage, and Google
+        Cloud has storage classes for data that is accessed rarely and for
+        long-term archiving. These services can be useful for companies that
+        have a lot of data to keep for backup or compliance reasons.
+      </p>
+
+      <p>
+        Archive storage is not suitable for files that employees need to open
+        every day. In my opinion, it makes more sense for backups, old records
+        and other information that mainly needs to be kept safely for a long
+        time.
+      </p>
+
+      <p class="source">
+        <strong>Sources:</strong> Amazon Web Services – S3 Glacier; Microsoft
+        Azure – Blob Storage; Google Cloud – Cloud Storage
+      </p>
+    </section>
+
+    <section>
+    <h2>6. Own web server vs SaaS, PaaS and IaaS</h2>
+
+    <p>
+        I think maintaining your own web server makes sense when a company
+        needs a lot of control over the server and its configuration. For
+        example, a company might have special software or security
+        requirements that are difficult to meet with a normal hosting
+        service. It can also make sense if the company already has IT staff
+        who know how to manage servers.
+    </p>
+
+    <p>
+        However, running your own server also means more responsibility.
+        Someone has to take care of updates, security, backups, storage and
+        problems when something goes wrong. This can take a lot of time and
+        money.
+    </p>
+
+    <p>
+        For many companies, using a cloud service is easier. IaaS gives the
+        company virtual machines and more control over the operating system.
+        This is similar to the previous cPouta exercise, where I used an
+        Ubuntu virtual machine and installed and configured the web server
+        myself.
+    </p>
+
+    <p>
+        With PaaS, the company does not need to manage as much of the
+        underlying infrastructure. The focus is more on deploying the
+        application. For example, in the Rahti exercise, the web application
+        was deployed as a container instead of me having to create and
+        maintain a whole virtual machine.
+    </p>
+
+    <p>
+        SaaS goes even further because the company uses a complete software
+        service provided by someone else. For example, a company could use
+        an online service for email instead of installing and maintaining
+        its own email server.
+    </p>
+
+    <p>
+        In my opinion, the choice depends on how much control the company
+        needs and how much server administration it wants to do itself. A
+        small company will probably benefit more from SaaS or PaaS, while a
+        company with special requirements and its own IT team might prefer
+        IaaS or its own servers.
+    </p>
+
+    <p class="source">
+        <strong>Sources:</strong> CSC – cPouta and Rahti documentation;
+        Microsoft Azure – Cloud service models
+    </p>
+</section>
+
+<section>
+    <h2>7. Public DNS resolvers vs ISP DNS</h2>
+
+    <p>
+        Public DNS resolvers are DNS services that anyone can use instead
+        of the DNS server provided by their internet service provider (ISP).
+        Two well-known examples are Google's 8.8.8.8 and Cloudflare's
+        1.1.1.1.
+    </p>
+
+    <p>
+        One advantage is that public DNS services can sometimes be faster
+        or more reliable than an ISP's DNS server. This depends on the
+        user's location and internet provider, but large providers have
+        DNS servers in many locations around the world. If the ISP's DNS
+        service is slow or has problems, using a public resolver can be
+        an easy alternative.
+    </p>
+
+    <p>
+        Another advantage is privacy and security features. For example,
+        Cloudflare promotes 1.1.1.1 as a privacy-focused DNS resolver.
+        Public DNS services can also support encrypted DNS protocols such
+        as DNS over HTTPS. Some public DNS services provide additional
+        protection against known malicious domains.
+    </p>
+
+    <p>
+        However, using a public DNS resolver also has some disadvantages.
+        The DNS provider can see DNS queries from users, so changing from
+        the ISP's DNS does not mean that DNS information becomes completely
+        private. The user is simply trusting a different company with that
+        information.
+    </p>
+
+    <p>
+        There can also be differences in filtering. An ISP might provide
+        services or filters through its DNS, while a public resolver may
+        behave differently. Some public DNS providers also have their own
+        security or content-filtering options, which can affect which
+        websites can be reached.
+    </p>
+
+    <p>
+        For normal home users, the ISP's DNS resolver is usually the easiest
+        option because it is normally configured automatically when the
+        router connects to the internet. I think public DNS is useful when
+        someone has problems with their ISP's DNS or wants specific features
+        such as encrypted DNS or additional security options. However, there
+        is not necessarily a reason for every home user to change their DNS
+        if the ISP's service already works well.
+    </p>
+
+    <p class="source">
+        <strong>Sources:</strong> Google Public DNS; Cloudflare 1.1.1.1;
+        Mozilla – DNS over HTTPS
+    </p>
+</section>
+
+  </body>
+</html>
